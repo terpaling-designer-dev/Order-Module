@@ -74,16 +74,72 @@ function createOrderCard(order) {
                         <p>${order.order_created}</p>
                     </div>
                 </div>
-                <div class="data-points"><div class="title"><p>Number of Products</p></div><div class="content"><p>${order.number_of_products}</p></div></div>
-                <div class="data-points"><div class="title"><p>Channel</p></div><div class="content"><p>${order.channel}</p></div></div>
-                <div class="data-points"><div class="title"><p>Promo Code</p></div><div class="content"><p>${order.promo_code}</p></div></div>
-                <div class="data-points"><div class="title"><p>Fulfillment</p></div><div class="content"><p>${order.fulfillment}</p></div></div>
-                <div class="data-points"><div class="title"><p>Delivered On</p></div><div class="content"><p>${order.delivered_on}</p></div></div>
+                <div class="data-points">
+                    <div class="title">
+                        <p>Number of Products</p>
+                    </div>
+                    <div class="content">
+                        <p>${order.number_of_products}</p>
+                    </div>
+                </div>
+                <div class="data-points">
+                    <div class="title">
+                        <p>Channel</p>
+                    </div>
+                    <div class="content">
+                        <p>${order.channel}</p>
+                    </div>
+                </div>
+                <div class="data-points">
+                    <div class="title">
+                        <p>Promo Code</p>
+                    </div>
+                    <div class="content">
+                        <p>${order.promo_code}</p>
+                    </div>
+                </div>
+                <div class="data-points">
+                    <div class="title">
+                        <p>Fulfillment</p>
+                    </div>
+                    <div class="content">
+                        <p>${order.fulfillment}</p>
+                    </div>
+                </div>
+                <div class="data-points">
+                    <div class="title">
+                        <p>Delivered On</p>
+                    </div>
+                    <div class="content">
+                        <p>${order.delivered_on}</p>
+                    </div>
+                </div>
             </div>
             <div class="rows">
-                <div class="data-points"><div class="title"><p>Payment Method</p></div><div class="content"><p>${order.payment_method}</p></div></div>
-                <div class="data-points"><div class="title"><p>Payment Status</p></div><div class="content"><p>${order.payment_status}</p></div></div>
-                <div class="data-points"><div class="title"><p>Payment Due</p></div><div class="content"><p>${order.payment_due}</p></div></div>
+                <div class="data-points">
+                    <div class="title">
+                        <p>Payment Method</p>
+                    </div>
+                    <div class="content">
+                        <p>${order.payment_method}</p>
+                    </div>
+                </div>
+                <div class="data-points">
+                    <div class="title">
+                        <p>Payment Status</p>
+                    </div>
+                    <div class="content">
+                        <p>${order.payment_status}</p>
+                    </div>
+                </div>
+                <div class="data-points">
+                    <div class="title">
+                        <p>Payment Due</p>
+                    </div>
+                    <div class="content">
+                        <p>${order.payment_due}</p>
+                    </div>
+                </div>
                 <div class="data-points"><!-- empty --></div>
                 <div class="data-points"><!-- empty --></div>
                 <div class="data-points"><!-- empty --></div>
