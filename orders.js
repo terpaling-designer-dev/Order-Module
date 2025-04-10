@@ -47,6 +47,38 @@ const orders = [
         payment_due: "15/12/2025",
         tracking_number: "DHL987654",
     }
+    {
+        supplier: "Global Trading Co. Sdn Bhd",
+        order_id: "#85261 - 4896",
+        status: "Completed",
+        amount: "MYR 5,678.90",
+        order_created: "14/10/2025",
+        number_of_products: 30,
+        channel: "Platform",
+        promo_code: "VIP20",
+        fulfillment: "Poslaju",
+        delivered_on: "16/10/2025",
+        payment_method: "Credit Card",
+        payment_status: "Paid",
+        payment_due: "14/12/2025",
+        tracking_number: "POS123678",
+    },
+    {
+        supplier: "Kuala Trade Enterprise",
+        order_id: "#85262 - 4897",
+        status: "Pending",
+        amount: "MYR 1,250.30",
+        order_created: "15/10/2025",
+        number_of_products: 8,
+        channel: "Platform",
+        promo_code: "BLACKFRIDAY",
+        fulfillment: "J&T Express",
+        delivered_on: "Pending",
+        payment_method: "Platform Credit",
+        payment_status: "Payment Due",
+        payment_due: "15/12/2025",
+        tracking_number: "JTX765432",
+    }
 ];
 
 function createOrderCard(order) {
