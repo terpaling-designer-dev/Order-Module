@@ -66,7 +66,14 @@ function createOrderCard(order) {
         </div>
         <div class="order-details">
             <div class="rows">
-                <div class="data-points"><div class="title"><p>Order Created</p></div><div class="content"><p>${order.order_created}</p></div></div>
+                <div class="data-points">
+                    <div class="title">
+                        <p>Order Created</p>
+                    </div>
+                    <div class="content">
+                        <p>${order.order_created}</p>
+                    </div>
+                </div>
                 <div class="data-points"><div class="title"><p>Number of Products</p></div><div class="content"><p>${order.number_of_products}</p></div></div>
                 <div class="data-points"><div class="title"><p>Channel</p></div><div class="content"><p>${order.channel}</p></div></div>
                 <div class="data-points"><div class="title"><p>Promo Code</p></div><div class="content"><p>${order.promo_code}</p></div></div>
