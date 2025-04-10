@@ -46,7 +46,7 @@ const orders = [
         payment_status: "Payment Due",
         payment_due: "15/12/2025",
         tracking_number: "DHL987654",
-    }
+    },
     {
         supplier: "Global Trading Co. Sdn Bhd",
         order_id: "#85261 - 4896",
