@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Orders</h1>
+    </header>
+    <div class="container">
+        <nav class="order-tabs">
+            <button class="active">All Orders</button>
+            <button>Unpaid</button>
+            <button>Processing</button>
+            <button>Confirmed</button>
+            <button>In Transit</button>
+            <button>Completed</button>
+            <button>Rejected</button>
+            <button>Dispute</button>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="order-list">
+            <div class="top-section">
+                <div class="search-filters">
+                    <select>
+                        <option>All</option>
+                        <option>Seller Name</option>
+                        <option>Order ID</option>
+                        <option>Channel</option>
+                        <!-- Add other options if needed -->
+                    </select>
+                    <input type="text" placeholder="Search Orders">
+                    <button>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                 </div>
+                <div class="right-section">
+                  <div class="date-range">
+                      <label>
+                          <input type="radio" name="filter" checked> Latest
+                      </label>
+                      <label>
+                          <input type="radio" name="filter"> All
+                      </label>
+                      <label>
+                          <input type="radio" name="filter"> Custom:
+                          <input type="text" placeholder="Enter Date">
+                      </label>
+                  </div>
+                  <button class="download-order">Download Order</button>
+                </div>
+            </div>
+            <div class="order-table">
+              <div class="order-card completed">
+                <div class="order-header">
+                  <div class="supplier-left">
+                    <div class="data-points">
+                      <span class="supplier">SUPPLIER SHOP SDN BHD</span>
+                      <span class="order-number">#85258 - 4893</span>
+                    </div>
+                    <span class="status">Completed</span>
+                  </div>
+                  <h2>MYR 3,920.68</h2>
+                </div>
+                <div class="order-details">
+                  <div class="rows">
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Order Created</p>
+                      </div>
+                      <div class="content">
+                        <p>08/10/2023</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Number of Products</p>
+                      </div>
+                      <div class="content">
+                        <p>23</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Channel</p>
+                      </div>
+                      <div class="content">
+                        <p>Platform</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Promo Code</p>
+                      </div>
+                      <div class="content">
+                        <p>None Applied</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Fulfillment</p>
+                      </div>
+                      <div class="content">
+                        <p>Poslaju</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Delivered On</p>
+                      </div>
+                      <div class="content">
+                        <p>12/10/2023</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="rows">
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Payment Method</p>
+                      </div>
+                      <div class="content">
+                        <p>Platform Credit</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Payment Status</p>
+                      </div>
+                      <div class="content">
+                        <p>Payment Due</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Payment Due</p>
+                      </div>
+                      <div class="content">
+                        <p>11/12/2023</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <!-- placeholder -->
+                    </div>
+                    
+                    <div class="data-points">
+                      <!-- placeholder -->
+                    </div>
+                    
+                    <div class="data-points">
+                      <!-- placeholder -->
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="order-actions">
+                  <div class="data-points">
+                    <div class="title">
+                      <p>Tracking Number</p>
+                    </div>
+                    <div class="content">
+                      <p>ABX123145</p>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="view-btn">View Detail</button>
+                    <button class="download-btn">Download</button>
+                    <button class="manage-btn">Manage Financing</button>
+                  </div>
+                </div>
+              </div>
+                            <div class="order-card completed">
+                <div class="order-header">
+                  <div class="supplier-left">
+                    <div class="data-points">
+                      <span class="supplier">SUPPLIER SHOP SDN BHD</span>
+                      <span class="order-number">#85258 - 4893</span>
+                    </div>
+                    <span class="status">Completed</span>
+                  </div>
+                  <h2>MYR 3,920.68</h2>
+                </div>
+                <div class="order-details">
+                  <div class="rows">
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Order Created</p>
+                      </div>
+                      <div class="content">
+                        <p>08/10/2023</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Number of Products</p>
+                      </div>
+                      <div class="content">
+                        <p>23</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Channel</p>
+                      </div>
+                      <div class="content">
+                        <p>Platform</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Promo Code</p>
+                      </div>
+                      <div class="content">
+                        <p>None Applied</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Fulfillment</p>
+                      </div>
+                      <div class="content">
+                        <p>Poslaju</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Delivered On</p>
+                      </div>
+                      <div class="content">
+                        <p>12/10/2023</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="rows">
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Payment Method</p>
+                      </div>
+                      <div class="content">
+                        <p>Platform Credit</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Payment Status</p>
+                      </div>
+                      <div class="content">
+                        <p>Payment Due</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <div class="title">
+                        <p>Payment Due</p>
+                      </div>
+                      <div class="content">
+                        <p>11/12/2023</p>
+                      </div>
+                    </div>
+                    
+                    <div class="data-points">
+                      <!-- placeholder -->
+                    </div>
+                    
+                    <div class="data-points">
+                      <!-- placeholder -->
+                    </div>
+                    
+                    <div class="data-points">
+                      <!-- placeholder -->
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="order-actions">
+                  <div class="data-points">
+                    <div class="title">
+                      <p>Tracking Number</p>
+                    </div>
+                    <div class="content">
+                      <p>ABX123145</p>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="view-btn">View Detail</button>
+                    <button class="download-btn">Download</button>
+                    <button class="manage-btn">Manage Financing</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
