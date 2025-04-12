@@ -8,6 +8,7 @@ p {
 
 h2 {
   margin: 0px;
+  font-size: 20px;
 }
 
 body {
@@ -274,4 +275,44 @@ button {
         width: 100%;
         padding-top: 10px; /* Add spacing when stacked */
     }
+}
+
+@media (max-width: 768px) {
+    .rows {
+        flex-direction: column;
+        padding: 0px 0px 0px 0px;
+        gap: 8px;
+    }
+
+    .order-header {
+        flex-wrap: wrap;
+    }
+
+    .order-details {
+        display: flex;
+        padding: 16px 0px 16px 16px;
+    }
+    .order-header h2 {
+        margin: 4px 0px 0px 0px;
+    }
+
+    .order-actions .data-points {
+        min-width: max-content;
+    }
+}
+
+@media (max-width: 542px) {
+    .supplier-left {
+        width: 100%;
+    }
+
+    .order-actions button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .order-actions div {
+        width: 100%;
+    }
+
 }
