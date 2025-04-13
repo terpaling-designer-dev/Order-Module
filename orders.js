@@ -20,13 +20,13 @@ const orders = [
         products: [
             { id: 1, img: 'img/100plus-lemon-lime-325ml.jpg', name: '100 Plus Lemon Lime 325ml (24 Units Per Carton)', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
             { id: 2, img: 'img/100plus-regular-500ml.png', name: '100 PLUS REGULAR Bottle 500 ml Isotonic Drink', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
-            { id: 3, img: 'img/glo-lemon-900ml.webp', name: 'GLO LEMON CONCENTRATED DISHWASHING LIQUID 900ML 12 X 900ML', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
+            { id: 3, img: 'img/glo-lemon-900ml.jpg', name: 'GLO LEMON CONCENTRATED DISHWASHING LIQUID 900ML 12 X 900ML', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
             { id: 4, img: 'img/100plus-lemon-lime-325ml.jpg', name: '100 Plus Lemon Lime 325ml (24 Units Per Carton)', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
             { id: 5, img: 'img/100plus-regular-500ml.png', name: '100 PLUS REGULAR Bottle 500 ml Isotonic Drink', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
-            { id: 6, img: 'img/glo-lemon-900ml.webp', name: 'GLO LEMON CONCENTRATED DISHWASHING LIQUID 900ML 12 X 900ML', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' }, // <-- Updated path
+            { id: 6, img: 'img/glo-lemon-900ml.jpg', name: 'GLO LEMON CONCENTRATED DISHWASHING LIQUID 900ML 12 X 900ML', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' }, // <-- Updated path
             { id: 7, img: 'img/100plus-lemon-lime-325ml.jpg', name: '100 Plus Lemon Lime 325ml (24 Units Per Carton)', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' }, // <-- Updated path
             { id: 8, img: 'img/100plus-regular-500ml.png', name: '100 PLUS REGULAR Bottle 500 ml Isotonic Drink', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' }, // <-- Updated path
-            { id: 9, img: 'img/glo-lemon-900ml.webp', name: 'GLO LEMON CONCENTRATED DISHWASHING LIQUID 900ML 12 X 900ML', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' }, // <-- Updated path
+            { id: 9, img: 'img/glo-lemon-900ml.jpg', name: 'GLO LEMON CONCENTRATED DISHWASHING LIQUID 900ML 12 X 900ML', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' }, // <-- Updated path
             { id: 10, img: 'img/100plus-lemon-lime-325ml.jpg', name: '100 Plus Lemon Lime 325ml (24 Units Per Carton)', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' } // <-- Updated path
         ],
         summary: {
