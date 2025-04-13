@@ -1,0 +1,388 @@
+/* --- START OF FILE styles.css --- */
+/* Keep existing styles */
+* {
+    box-sizing: border-box;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* More modern font stack */
+    font-size:14px;
+    background-color: #f8f9fa; /* Lighter grey background */
+    width: 100%; /* Use full width for body */
+    padding-bottom: 32px;
+}
+
+p { /* Keep existing p reset */
+  margin: 0px;
+}
+
+h2 { /* Keep existing h2 reset */
+  margin: 0px;
+  font-size: 20px;
+}
+
+/* --- Styles from Original index.html page --- */
+/* ... (Keep styles for .container, .order-tabs, .top-section, .search-filters, .right-section, .order-list, .order-card, .order-header, .supplier-left, .data-points, .title, .content, .status, .order-details, .rows, .order-actions, buttons, .download-btn, .download-order, .view-btn, .manage-btn etc. AS NEEDED for index.html) ... */
+/* --- Ensure they don't conflict heavily with detail page styles --- */
+
+
+/* --- NEW/UPDATED Styles for order-detail.html --- */
+
+.page-header {
+    max-width: 1200px;
+    margin: 20px auto 10px auto;
+    padding: 0 20px;
+    color: #6c757d; /* Grey color for breadcrumb */
+}
+
+.page-header h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #343a40; /* Darker heading color */
+}
+
+.breadcrumb-separator {
+    color: #adb5bd; /* Lighter grey for separator */
+    margin: 0 5px;
+}
+
+.back-button-container {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+}
+
+.back-button {
+    background-color: transparent;
+    color: #FF8500; /* Orange color like image */
+    border: none;
+    padding: 8px 0; /* Less padding */
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.back-button i {
+    font-size: 18px;
+}
+
+.back-button:hover {
+    color: #e07500; /* Darker orange on hover */
+}
+
+.detail-content-area {
+    max-width: 1200px; /* Control max width */
+    margin: 0 auto;
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+.detail-card {
+    background: white;
+    border: 1px solid #e9ecef; /* Lighter border */
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.detail-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px 24px;
+    border-bottom: 1px solid #e9ecef;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    gap: 10px;
+}
+
+.detail-card-header-left {
+    display: flex;
+    flex-direction: column; /* Stack supplier, ID, status */
+    gap: 4px;
+}
+
+.detail-card-header-left h2 { /* Supplier Name */
+    font-size: 18px;
+    font-weight: 600;
+    color: #212529;
+}
+
+.detail-order-id {
+    font-size: 14px;
+    color: #FF8500; /* Orange */
+    font-weight: 500;
+}
+
+.detail-status {
+    background: #e7f3ff; /* Light blue background */
+    color: #0d6efd; /* Blue text */
+    padding: 3px 10px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block; /* Fit content */
+    margin-top: 4px; /* Space from order ID */
+    /* Add specific styles for different statuses if needed */
+}
+.detail-status.completed { background: #d1e7dd; color: #155724;}
+.detail-status.pending { background: #fff3cd; color: #856404;}
+.detail-status.rejected { background: #f8d7da; color: #721c24;}
+/* Add more status styles */
+
+.detail-card-header-right {
+    text-align: right;
+}
+
+.detail-amount {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 5px;
+}
+
+.view-breakdown-link {
+    font-size: 13px;
+    color: #7A5AF8; /* Purple */
+    text-decoration: none;
+    font-weight: 500;
+}
+.view-breakdown-link:hover {
+    text-decoration: underline;
+}
+
+.detail-card-body {
+    padding: 20px 24px;
+    border-bottom: 1px solid #e9ecef; /* Separator line */
+}
+
+.detail-grid {
+    display: grid;
+     /* Adjust columns for responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* More flexible */
+    gap: 20px 16px; /* Row and column gap */
+}
+
+.detail-item .title {
+    color: #6c757d; /* Grey */
+    font-size: 12px;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase; /* Optional: Uppercase titles */
+}
+
+.detail-item .content {
+    font-weight: 600;
+    color: #212529; /* Darker text */
+    font-size: 14px;
+}
+
+.detail-card-actions {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-end; /* Align buttons right */
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap; /* Wrap buttons if needed */
+}
+
+.detail-action-btn {
+    padding: 9px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid; /* Base border */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.detail-action-btn i {
+    font-size: 1em; /* Match text size or adjust */
+}
+
+.view-detail-btn, .download-detail-btn {
+    background-color: #fff;
+    border-color: #7A5AF8; /* Purple border */
+    color: #7A5AF8; /* Purple text */
+}
+.view-detail-btn:hover, .download-detail-btn:hover {
+    background-color: #f8f5ff; /* Very light purple */
+}
+
+.download-detail-btn .fa-chevron-down {
+    font-size: 0.8em; /* Smaller arrow */
+    margin-left: 4px;
+}
+
+.mark-received-btn {
+    background-color: #7A5AF8; /* Purple background */
+    border-color: #7A5AF8;
+    color: white;
+}
+.mark-received-btn:hover {
+    background-color: #694edc; /* Darker purple */
+    border-color: #694edc;
+}
+
+
+/* Product List Styles */
+.product-list-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.product-list-card h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #212529;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.product-list-header, .product-line {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    font-size: 13px;
+    color: #6c757d; /* Grey for header */
+    border-bottom: 1px solid #e9ecef;
+}
+.product-line {
+     color: #212529; /* Darker for product lines */
+     font-size: 14px;
+}
+.product-list-body .product-line:last-child {
+    border-bottom: none;
+}
+
+
+.col-index { flex: 0 0 5%; text-align: center; }
+.col-product { flex: 1 1 40%; display: flex; align-items: center; gap: 15px; }
+.col-price { flex: 0 0 15%; text-align: right; }
+.col-quantity { flex: 0 0 15%; text-align: right; }
+.col-total { flex: 0 0 20%; text-align: right; font-weight: 500; }
+
+.product-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain; /* Or cover */
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.product-name {
+    font-weight: 500;
+}
+
+/* Product Summary Styles */
+.product-list-summary {
+    padding: 20px 24px;
+    border-top: 1px solid #dee2e6; /* Slightly darker top border */
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.summary-line:last-child {
+    margin-bottom: 0;
+}
+
+.summary-line span:first-child { /* Label */
+    color: #6c757d;
+}
+.summary-line span:last-child { /* Value */
+    color: #212529;
+    font-weight: 500;
+}
+
+.summary-divider {
+    border: none;
+    border-top: 1px dashed #adb5bd; /* Dashed line */
+    margin: 15px 0;
+}
+
+.summary-line.total span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #212529;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .detail-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for smaller screens */
+    }
+     .product-list-header {
+         display: none; /* Hide header on small screens, rely on labels */
+     }
+    .product-line {
+        flex-wrap: wrap; /* Stack columns */
+        padding: 15px;
+        gap: 10px;
+        border-bottom: 1px solid #e9ecef;
+        position: relative; /* For pseudo-elements */
+    }
+     .col-index { display: none; } /* Hide index */
+
+     .col-product { flex-basis: 100%; order: 1; } /* Full width, first */
+     .col-price, .col-quantity, .col-total {
+         flex-basis: calc(50% - 10px); /* Two columns below product */
+         text-align: left;
+         padding-left: 10px; /* Indent */
+         position: relative;
+     }
+     .col-price { order: 2; }
+     .col-quantity { order: 3; text-align: right; padding-left: 0; padding-right: 10px;}
+     .col-total { order: 4; flex-basis: 100%; text-align: right; margin-top: 10px; font-weight: 600; }
+
+     /* Add labels using pseudo-elements */
+     .col-price::before { content: "Unit Price: "; font-weight: normal; color: #6c757d; }
+     .col-quantity::before { content: "Qty: "; font-weight: normal; color: #6c757d;}
+     .col-total::before { content: "Total: "; font-weight: normal; color: #6c757d; }
+
+     .product-list-summary { padding: 15px; }
+}
+
+@media (max-width: 576px) {
+     .detail-card-header, .detail-card-body, .detail-card-actions, .product-list-card h2 {
+         padding: 15px; /* Reduce padding on small screens */
+     }
+     .detail-grid {
+        grid-template-columns: 1fr; /* Single column grid */
+        gap: 15px;
+    }
+    .detail-card-actions {
+        justify-content: center; /* Center buttons */
+    }
+    .detail-action-btn {
+        width: 100%; /* Make buttons full width */
+        justify-content: center;
+    }
+    .col-price, .col-quantity {
+        flex-basis: 100%; /* Stack price/qty fully */
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 0;
+    }
+     .col-quantity { text-align: left;} /* Override right align */
+
+
+}
+
+/* --- END OF FILE styles.css --- */

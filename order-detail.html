@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Reuse main styles -->
+    <link rel="stylesheet" href="order-detail.css"> <!-- Specific styles for detail page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="page-header"> <!-- Simple header for context -->
+        <h1>Orders <span class="breadcrumb-separator">></span> Order details</h1>
+    </header>
+    <div class="back-button-container">
+         <a href="index.html" class="back-button">
+            <i class="fa-solid fa-arrow-left"></i> Back to Orders
+         </a>
+    </div>
+
+    <div class="detail-content-area"> <!-- Main container for details -->
+
+        <!-- Order Info Card -->
+        <div class="detail-card">
+            <div class="detail-card-header">
+                <div class="detail-card-header-left">
+                    <h2 id="detailSupplier"></h2>
+                    <span class="detail-order-id" id="detailOrderId"></span>
+                    <span class="detail-status" id="detailStatus"></span>
+                </div>
+                <div class="detail-card-header-right">
+                    <span class="detail-amount" id="detailAmount"></span>
+                    <a href="#" class="view-breakdown-link">View Breakdown</a>
+                </div>
+            </div>
+
+            <div class="detail-card-body">
+                <div class="detail-grid">
+                     <div class="detail-item">
+                        <span class="title">Order Created</span>
+                        <span class="content" id="detailOrderCreated"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="title">Number of Products</span>
+                        <span class="content" id="detailNumProducts"></span>
+                    </div>
+                     <div class="detail-item">
+                        <span class="title">Channel</span>
+                        <span class="content" id="detailChannel"></span>
+                    </div>
+                     <div class="detail-item">
+                        <span class="title">Promo Code</span>
+                        <span class="content" id="detailPromoCode"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="title">Fulfillment</span>
+                        <span class="content" id="detailFulfillment"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="title">Estimated Delivery</span>
+                        <span class="content" id="detailEstimatedDelivery"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="title">Payment Method</span>
+                        <span class="content" id="detailPaymentMethod"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="title">Payment Status</span>
+                        <span class="content" id="detailPaymentStatus"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="title">Payment Due</span>
+                        <span class="content" id="detailPaymentDue"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="title">Tracking Number</span>
+                        <span class="content" id="detailTrackingNumber"></span>
+                    </div>
+                    <!-- Add empty divs if needed to fill grid row -->
+                    <div class="detail-item"></div>
+                    <div class="detail-item"></div>
+                </div>
+            </div>
+
+            <div class="detail-card-actions">
+                <button class="detail-action-btn view-detail-btn">
+                    <i class="fa-regular fa-eye"></i> View Detail
+                 </button>
+                <button class="detail-action-btn download-detail-btn">
+                     <i class="fa-solid fa-download"></i> Download <i class="fa-solid fa-chevron-down"></i>
+                 </button>
+                <button class="detail-action-btn mark-received-btn">Mark Received</button>
+            </div>
+        </div>
+
+        <!-- Product List -->
+        <div class="product-list-card">
+             <h2>Product Details</h2>
+             <div class="product-list-header">
+                 <div class="col-index">#</div>
+                 <div class="col-product">Product</div>
+                 <div class="col-price">Unit Price</div>
+                 <div class="col-quantity">Quantity</div>
+                 <div class="col-total">Total Price</div>
+             </div>
+             <div class="product-list-body" id="productLinesContainer">
+                 <!-- Product lines will be injected here by JS -->
+             </div>
+             <div class="product-list-summary" id="summaryContainer">
+                <!-- Summary lines will be injected here by JS -->
+                <div class="summary-line">
+                    <span>Subtotal (excl. Tax)</span>
+                    <span id="summarySubtotalExcl"></span>
+                </div>
+                 <div class="summary-line">
+                    <span>Voucher (incl. Tax)</span>
+                    <span id="summaryVoucher"></span>
+                </div>
+                 <div class="summary-line">
+                    <span>Credit Notes</span>
+                    <span id="summaryCreditNotes"></span>
+                </div>
+                 <div class="summary-line">
+                    <span>Subtotal (Discounted)</span>
+                    <span id="summarySubtotalDiscounted"></span>
+                </div>
+                 <div class="summary-line">
+                    <span>Tax</span>
+                    <span id="summaryTax"></span>
+                </div>
+                 <div class="summary-line">
+                    <span>Shipping Cost (incl. Tax)</span>
+                    <span id="summaryShipping"></span>
+                </div>
+                <hr class="summary-divider">
+                 <div class="summary-line total">
+                    <span>Total</span>
+                    <span id="summaryTotal"></span>
+                </div>
+             </div>
+        </div>
+
+        <!-- Loading/Error Messages -->
+        <div id="loadingMessage" style="display: none; text-align: center; padding: 20px;">Loading order details...</div>
+        <div id="errorMessage" style="color: red; display: none; text-align: center; padding: 20px;"></div>
+
+    </div><!-- End detail-content-area -->
+
+    <!-- Include orders data source FIRST -->
+    <script src="orders.js"></script>
+    <!-- Then include the script to process it -->
+    <script src="order-detail.js"></script>
+</body>
+</html>
