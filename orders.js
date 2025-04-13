@@ -17,18 +17,19 @@ const orders = [
         payment_status: "Invoiced Approved",
         payment_due: "11/12/2023",
         tracking_number: "ABX123145",
-        products: [
-            { id: 1, img: 'img/100plus-lemon-lime-325ml.jpg', name: '100 Plus Lemon Lime 325ml (24 Units Per Carton)', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
-            { id: 2, img: 'img/100plus-regular-500ml.png', name: '100 PLUS REGULAR Bottle 500 ml Isotonic Drink', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
-            { id: 3, img: 'img/glo-lemon-900ml.jpg', name: 'GLO LEMON CONCENTRATED DISHWASHING LIQUID 900ML 12 X 900ML', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
-            { id: 4, img: 'img/100plus-lemon-lime-325ml.jpg', name: '100 Plus Lemon Lime 325ml (24 Units Per Carton)', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
-            { id: 5, img: 'img/100plus-regular-500ml.png', name: '100 PLUS REGULAR Bottle 500 ml Isotonic Drink', unit_price: 'MYR 8.33', quantity: '100 Unit', total_price: 'MYR 833.00' }, // <-- Updated path
-            { id: 6, img: 'img/glo-lemon-900ml.jpg', name: 'GLO LEMON CONCENTRATED DISHWASHING LIQUID 900ML 12 X 900ML', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' }, // <-- Updated path
-            { id: 7, img: 'img/100plus-lemon-lime-325ml.jpg', name: '100 Plus Lemon Lime 325ml (24 Units Per Carton)', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' }, // <-- Updated path
-            { id: 8, img: 'img/100plus-regular-500ml.png', name: '100 PLUS REGULAR Bottle 500 ml Isotonic Drink', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' }, // <-- Updated path
-            { id: 9, img: 'img/glo-lemon-900ml.jpg', name: 'GLO LEMON CONCENTRATED DISHWASHING LIQUID 900ML 12 X 900ML', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' }, // <-- Updated path
-            { id: 10, img: 'img/100plus-lemon-lime-325ml.jpg', name: '100 Plus Lemon Lime 325ml (24 Units Per Carton)', unit_price: 'MYR 8.33', quantity: '50 Unit', total_price: 'MYR 416.50' } // <-- Updated path
-        ],
+        products:[
+            { id: 1, img: 'img/100plus-lemon-lime-325ml.jpg', name: '100 Plus Lemon Lime 325ml (24 Units Per Carton)', unit_price: 'MYR 2.50', quantity: '24 Unit', total_price: 'MYR 60.00' },
+            { id: 2, img: 'img/100plus-regular-500ml.png', name: '100 PLUS REGULAR Bottle 500ml', unit_price: 'MYR 3.00', quantity: '24 Unit', total_price: 'MYR 72.00' },
+            { id: 3, img: 'img/glo-lemon-900ml.jpg', name: 'Glo Lemon Dishwashing Liquid 900ml', unit_price: 'MYR 5.50', quantity: '12 Unit', total_price: 'MYR 66.00' },
+            { id: 4, img: 'img/shopping-bags-set.jpeg', name: 'Shopping Bags Set (Reusable)', unit_price: 'MYR 12.00', quantity: '10 Unit', total_price: 'MYR 120.00' },
+            { id: 5, img: 'img/a4-paper.jpg', name: 'A4 Paper 500 Sheets', unit_price: 'MYR 15.00', quantity: '5 Unit', total_price: 'MYR 75.00' },
+            { id: 6, img: 'img/ballpoint-pens-box.jpg', name: 'Ballpoint Pens Box (50 pcs)', unit_price: 'MYR 18.00', quantity: '3 Unit', total_price: 'MYR 54.00' },
+            { id: 7, img: 'img/sunflower-oil-5l.jpg', name: 'Sunflower Oil 5L', unit_price: 'MYR 35.00', quantity: '6 Unit', total_price: 'MYR 210.00' },
+            { id: 8, img: 'img/thermos-1l.jpg', name: 'Thermos Flask 1L', unit_price: 'MYR 40.00', quantity: '4 Unit', total_price: 'MYR 160.00' },
+            { id: 9, img: 'img/office-chair-mesh.png', name: 'Office Chair Mesh Back', unit_price: 'MYR 120.00', quantity: '2 Unit', total_price: 'MYR 240.00' },
+            { id: 10, img: 'img/premium-rice-10kg.png', name: 'Premium Rice 10kg', unit_price: 'MYR 45.00', quantity: '8 Unit', total_price: 'MYR 360.00' },
+            { id: 11, img: 'img/stapler-heavy-duty.png', name: 'Heavy Duty Stapler', unit_price: 'MYR 28.00', quantity: '5 Unit', total_price: 'MYR 140.00' }
+          ],
         summary: {
             subtotal_excl_tax: "MYR 6247.50",
             voucher_incl_tax: "0.00",
@@ -58,7 +59,7 @@ const orders = [
         payment_due: "N/A",
         tracking_number: "JTX567890",
         products: [
-             { id: 1, img: 'img/premium-rice-10kg.jpg', name: 'Premium Grade AA Rice (10kg Bag)', unit_price: 'MYR 45.00', quantity: '20 Bag', total_price: 'MYR 900.00' }, // <-- Updated path
+             { id: 1, img: 'img/premium-rice-10kg.png', name: 'Premium Grade AA Rice (10kg Bag)', unit_price: 'MYR 45.00', quantity: '20 Bag', total_price: 'MYR 900.00' }, // <-- Updated path
              { id: 2, img: 'img/sunflower-oil-5l.jpg', name: 'Cooking Oil - Sunflower (5L Bottle)', unit_price: 'MYR 32.00', quantity: '30 Bottle', total_price: 'MYR 960.00' } // <-- Updated path
         ],
         summary: {
@@ -121,7 +122,7 @@ const orders = [
         payment_due: "N/A",
         tracking_number: "Pending Shipment",
         products: [
-             { id: 1, img: 'img/office-chair-mesh.webp', name: 'Office Chair - Ergonomic Mesh Back', unit_price: 'MYR 250.00', quantity: '5 Unit', total_price: 'MYR 1250.00' } // <-- Updated path
+             { id: 1, img: 'img/office-chair-mesh.png', name: 'Office Chair - Ergonomic Mesh Back', unit_price: 'MYR 250.00', quantity: '5 Unit', total_price: 'MYR 1250.00' } // <-- Updated path
         ],
         summary: {
             subtotal_excl_tax: "MYR 1250.00",
@@ -152,7 +153,7 @@ const orders = [
         tracking_number: "N/A",
         products: [
              { id: 1, img: 'img/thermos-1l.jpg', name: 'Stainless Steel Thermos (1L)', unit_price: 'MYR 65.00', quantity: '10 Unit', total_price: 'MYR 650.00' }, // <-- Updated path
-             { id: 2, img: 'img/shopping-bags-set.png', name: 'Reusable Shopping Bags (Set of 5)', unit_price: 'MYR 15.00', quantity: '20 Set', total_price: 'MYR 300.00' } // <-- Updated path
+             { id: 2, img: 'img/shopping-bags-set.jpeg', name: 'Reusable Shopping Bags (Set of 5)', unit_price: 'MYR 15.00', quantity: '20 Set', total_price: 'MYR 300.00' } // <-- Updated path
         ],
         summary: {
             subtotal_excl_tax: "MYR 950.00",
