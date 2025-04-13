@@ -185,60 +185,60 @@ function createOrderCard(order) {
             </div>
             <h2>${order.amount}</h2>
         </div>
-        <div class="order-details">
-            <div class="rows">
+        <div class="detail-card-body">
+            <div class="detail-grid">
+                    <div class="data-points">
+                        <div class="title"><p>Order Created</p></div>
+                        <div class="content"><p>${order.order_created}</p></div>
+                    </div>
+                    <div class="data-points">
+                        <div class="title"><p>Number of Products</p></div>
+                        <div class="content"><p>${numProductsDisplay}</p></div>
+                    </div>
+                    <div class="data-points">
+                        <div class="title"><p>Channel</p></div>
+                        <div class="content"><p>${order.channel}</p></div>
+                    </div>
+                    <div class="data-points">
+                        <div class="title"><p>Promo Code</p></div>
+                        <div class="content"><p>${order.promo_code}</p></div>
+                    </div>
+                    <div class="data-points">
+                        <div class="title"><p>Fulfillment</p></div>
+                        <div class="content"><p>${order.fulfillment}</p></div>
+                    </div>
+                    <div class="data-points">
+                        <div class="title">
+                            <p>${order.delivered_on ? 'Delivered On' : 'Estimated Delivery'}</p>
+                        </div>
+                        <div class="content">
+                            <p>${order.delivered_on || order.estimated_delivery || 'N/A'}</p>
+                        </div>
+                    </div>
+                    <div class="data-points">
+                        <div class="title"><p>Payment Method</p></div>
+                        <div class="content"><p>${order.payment_method}</p></div>
+                    </div>
+                    <div class="data-points">
+                        <div class="title"><p>Payment Status</p></div>
+                        <div class="content"><p>${order.payment_status}</p></div>
+                    </div>
+                    <div class="data-points">
+                        <div class="title"><p>Payment Due</p></div>
+                        <div class="content"><p>${order.payment_due}</p></div>
+                    </div>
+                    </div>         
+                </div>
+            <div class="order-actions">
                 <div class="data-points">
-                    <div class="title"><p>Order Created</p></div>
-                    <div class="content"><p>${order.order_created}</p></div>
+                    <div class="title"><p>Tracking Number</p></div>
+                    <div class="content"><p>${order.tracking_number || 'N/A'}</p></div>
                 </div>
-                <div class="data-points">
-                    <div class="title"><p>Number of Products</p></div>
-                    <div class="content"><p>${numProductsDisplay}</p></div>
+                <div>
+                    <button class="view-btn">View Detail</button>
+                    <button class="download-btn">Download</button>
+                    <button class="manage-btn">Manage Financing</button>
                 </div>
-                <div class="data-points">
-                    <div class="title"><p>Channel</p></div>
-                    <div class="content"><p>${order.channel}</p></div>
-                </div>
-                <div class="data-points">
-                    <div class="title"><p>Promo Code</p></div>
-                    <div class="content"><p>${order.promo_code}</p></div>
-                </div>
-                <div class="data-points">
-                    <div class="title"><p>Fulfillment</p></div>
-                    <div class="content"><p>${order.fulfillment}</p></div>
-                </div>
-                 <div class="data-points">
-                    <div class="title"><p>Est. Delivery / Delivered On</p></div>
-                    <div class="content"><p>${order.delivered_on ? order.delivered_on + ' (Delivered)' : order.estimated_delivery || 'N/A'}</p></div>
-                </div>
-            </div>
-            <div class="rows">
-                <div class="data-points">
-                    <div class="title"><p>Payment Method</p></div>
-                    <div class="content"><p>${order.payment_method}</p></div>
-                </div>
-                <div class="data-points">
-                    <div class="title"><p>Payment Status</p></div>
-                    <div class="content"><p>${order.payment_status}</p></div>
-                </div>
-                <div class="data-points">
-                    <div class="title"><p>Payment Due</p></div>
-                    <div class="content"><p>${order.payment_due}</p></div>
-                </div>
-                 <div class="data-points"><!-- empty --></div>
-                 <div class="data-points"><!-- empty --></div>
-                 <div class="data-points"><!-- empty --></div>
-            </div>
-        </div>
-        <div class="order-actions">
-            <div class="data-points">
-                <div class="title"><p>Tracking Number</p></div>
-                <div class="content"><p>${order.tracking_number || 'N/A'}</p></div>
-            </div>
-            <div>
-                <button class="view-btn">View Detail</button>
-                <button class="download-btn">Download</button>
-                <button class="manage-btn">Manage Financing</button>
             </div>
         </div>
     `;

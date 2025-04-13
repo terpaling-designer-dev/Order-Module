@@ -197,16 +197,25 @@ header {
     font-weight: 500;
 }
 
-.order-details {
-  padding: 0px 16px 0px 16px;
+.detail-card-body {
+    padding: 20px 0px 20px 24px;
+    border-bottom: 1px solid #e9ecef; /* Separator line */
 }
 
-.rows {
+
+.detail-grid {
+    display: grid;
+    /* Adjust columns for responsiveness */
+   grid-template-columns: repeat(auto-fit, minmax(142px, 1fr)); /* More flexible */
+   gap: 20px 16px; /* Row and column gap */
+}
+
+/* .rows {
   width: 100%;
   display: inline-flex;
   padding: 16px 0px 16px 0px;
   flex-wrap: wrap;
-}
+} */
 
 .order-actions {
     display: flex;
@@ -278,11 +287,11 @@ button {
 }
 
 @media (max-width: 768px) {
-    .rows {
+    /* .rows {
         flex-direction: column;
         padding: 0px 0px 0px 0px;
         gap: 8px;
-    }
+    } */
 
     .order-header {
         flex-wrap: wrap;
