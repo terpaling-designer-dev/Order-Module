@@ -206,7 +206,7 @@ header {
 .detail-grid {
     display: grid;
     /* Adjust columns for responsiveness */
-   grid-template-columns: repeat(auto-fit, minmax(142px, 1fr)); /* More flexible */
+   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* More flexible */
    gap: 20px 16px; /* Row and column gap */
 }
 
@@ -284,6 +284,14 @@ button {
         width: 100%;
         padding-top: 10px; /* Add spacing when stacked */
     }
+
+    .detail-grid {
+        display: grid;
+        /* Adjust columns for responsiveness */
+       grid-template-columns: repeat(auto-fit, minmax(142px, 1fr)); /* More flexible */
+       gap: 20px 16px; /* Row and column gap */
+    }
+    
 }
 
 @media (max-width: 768px) {

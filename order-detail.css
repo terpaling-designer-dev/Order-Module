@@ -326,7 +326,7 @@ h2 { /* Keep existing h2 reset */
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .detail-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(142px, 1fr)); /* Adjust for smaller screens */
     }
      .product-list-header {
          display: none; /* Hide header on small screens, rely on labels */
