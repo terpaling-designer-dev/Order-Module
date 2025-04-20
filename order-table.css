@@ -6,40 +6,28 @@
     flex: 1;
 }
 
-.title p{
-    color: #6c757d; /* Adjust color as needed */
-    flex: 1;
-}
-
-.content p{
-    font-weight: 600;
-    color: #333; /* Adjust color as needed */
-    flex: 1;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
+.order-tabs-container {
     max-width: 1296px;
-    margin: 0 auto;  /* This centers the container */
+    margin: 20px auto 10px auto;
 }
 
 .order-tabs {
     display: flex;
-    /* no gap or small gap to keep the buttons flush */
-    gap: 0;
-    background: #fff;
-    /* Rounded corners on the container */
-    border-radius: 8px;
-    padding: 8px;
+    gap: 0; /* no gap or small gap to keep the buttons flush */
+    border-radius: 8px; /* Rounded corners on the container */
     margin-bottom: 12px;
+    
     overflow-x: auto; /* Allows horizontal scrolling if content overflows */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
 }
 
 .order-tabs button {
-    background: #fff;
-    padding: 10px 15px;
+    background: transparent;
+    padding: 12px 0px 12px 0px;
     border-radius: 6px;
+    font-weight: 600;
+    color: #6c757d;
     cursor: pointer;
     flex: 1; /* Ensures buttons take equal space */
     min-width: 100px; /* Prevents buttons from becoming too small */
