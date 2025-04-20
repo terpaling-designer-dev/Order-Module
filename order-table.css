@@ -1,11 +1,7 @@
+/* Order Table Styles */
 
-.data-points {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 2px;
-    flex: 1;
-}
 
+/* Component: Order Tabs */
 .order-tabs-container {
     max-width: 1296px;
     margin: 20px auto 10px auto;
@@ -38,13 +34,15 @@
     color: white;
 }
 
+
 .top-section {
     border-bottom: 1px solid #E5E5E5;
     display: flex;
     justify-content: space-between; /* Align items in a row */
     align-items: center; /* Vertically center elements */
     flex-wrap: wrap;
-    padding: 12px 12px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .search-filters {
@@ -97,14 +95,6 @@
     align-items: center;
     gap: 15px;
     flex-wrap: wrap; /* Allows stacking */
-}
-
-.order-table {
-    display: flex;
-    padding: 16px;
-    gap: 16px;
-    flex-direction: column;
-  
 }
 
 .order-list {
@@ -262,10 +252,6 @@ button {
     }
     .order-header h2 {
         margin: 4px 0px 0px 0px;
-    }
-
-    .order-actions .data-points {
-        min-width: max-content;
     }
 }
 
