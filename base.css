@@ -56,8 +56,7 @@ h2 { /* Keep existing h2 reset */
 
 .back-button {
     background-color: transparent;
-    color: #FF8500; /* Orange color like image */
-    border: none;
+    color: #FF8500;
     padding: 8px 0; /* Less padding */
     cursor: pointer;
     text-decoration: none;
@@ -65,10 +64,11 @@ h2 { /* Keep existing h2 reset */
     align-items: center;
     gap: 8px;
     font-weight: 600;
-    font-size: 15px;
 }
 .back-button i {
-    font-size: 18px;
+    font-size: 14px;
+    padding-top: 2px; /* Align icon with text */
+    font-weight: 600;
 }
 
 .back-button:hover {
