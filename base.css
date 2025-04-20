@@ -1,0 +1,85 @@
+/* --- Will be used for things available in ALL pages --- */
+* {
+    box-sizing: border-box;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* More modern font stack */
+    font-size:14px;
+    background-color: #f8f9fa; /* Lighter grey background */
+    width: 100%; /* Use full width for body */
+    padding-bottom: 32px;
+}
+
+p { /* Keep existing p reset */
+  margin: 0px;
+}
+
+h2 { /* Keep existing h2 reset */
+  margin: 0px;
+  font-size: 20px;
+}
+
+/* --- Styles from Original index.html page --- */
+/* ... (Keep styles for .container, .order-tabs, .top-section, .search-filters, .right-section, .order-list, .order-card, .order-header, .supplier-left, .data-points, .title, .content, .status, .order-details, .rows, .order-actions, buttons, .download-btn, .download-order, .view-btn, .manage-btn etc. AS NEEDED for index.html) ... */
+/* --- Ensure they don't conflict heavily with detail page styles --- */
+
+
+/* --- NEW/UPDATED Styles for order-detail.html --- */
+
+.page-header {
+    max-width: 1316px;
+    margin: 20px auto 10px auto;
+    padding: 0 20px;
+    color: #6c757d; /* Grey color for breadcrumb */
+}
+
+.page-header h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #343a40; /* Darker heading color */
+}
+
+.breadcrumb-separator {
+    color: #adb5bd; /* Lighter grey for separator */
+    margin: 0 5px;
+}
+
+.back-button-container {
+    max-width: 1316px;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+}
+
+.back-button {
+    background-color: transparent;
+    color: #FF8500; /* Orange color like image */
+    border: none;
+    padding: 8px 0; /* Less padding */
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.back-button i {
+    font-size: 18px;
+}
+
+.back-button:hover {
+    color: #e07500; /* Darker orange on hover */
+}
+
+.detail-content-area {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
