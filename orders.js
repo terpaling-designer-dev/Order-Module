@@ -178,8 +178,10 @@ function createOrderCard(order) {
     card.innerHTML = `    
     <div class="detail-card-header">
         <div class="detail-card-header-left">
-            <h2 id="detailSupplier">${order.supplier}</h2>
-            <span class="detail-order-id" id="detailOrderId">${order.order_id}</span>
+            <div>
+                <h2 id="detailSupplier">${order.supplier}</h2>
+                <span class="detail-order-id" id="detailOrderId">${order.order_id}</span>
+            </div>
             <span class="detail-status ${order.status.toLowerCase().replace(/\s+/g, '-')}" id="detailStatus">${order.status}</span>
         </div>
         <div class="detail-card-header-right">
