@@ -176,75 +176,79 @@ function createOrderCard(order) {
     const numProductsDisplay = order.products ? order.products.length : (order.number_of_products || 'N/A');
 
     card.innerHTML = `
-        <div class="order-header">
-            <div class="supplier-left">
-                <div class="data-points">
-                    <span class="supplier">${order.supplier}</span>
-                    <span class="order-number">${order.order_id}</span>
+        <div class="detail-card">
+            <div class="detail-card-header">
+                <div class="detail-card-header-left">
+                    <h2 id="detailSupplier">${order.supplier}</h2>
+                    <span class="detail-order-id" id="detailOrderId">${order.order_id}</span>
+                    <span class="detail-status ${order.status.toLowerCase().replace(/\s+/g, '-')}" id="detailStatus">${order.status}</span>
                 </div>
-                <span class="status ${order.status.toLowerCase().replace(/\s+/g, '-')}">${order.status}</span>
+                <div class="detail-card-header-right">
+                    <span class="detail-amount" id="detailAmount">${order.amount}</span>
+                </div>
             </div>
-            <h2>${order.amount}</h2>
-        </div>
-        <div class="detail-card-body">
-            <div class="detail-grid">
-                    <div class="data-points">
-                        <div class="title"><p>Order Created</p></div>
-                        <div class="content"><p>${order.order_created}</p></div>
+
+            <div class="detail-card-body">
+                <div class="detail-grid">
+                     <div class="detail-item">
+                        <span class="title">Order Created</span>
+                        <span class="content" id="detailOrderCreated">${order.order_created}</span>
                     </div>
-                    <div class="data-points">
-                        <div class="title"><p>Number of Products</p></div>
-                        <div class="content"><p>${numProductsDisplay}</p></div>
+                    <div class="detail-item">
+                        <span class="title">Number of Products</span>
+                        <span class="content" id="detailNumProducts">${numProductsDisplay}</span>
                     </div>
-                    <div class="data-points">
-                        <div class="title"><p>Channel</p></div>
-                        <div class="content"><p>${order.channel}</p></div>
+                     <div class="detail-item">
+                        <span class="title">Channel</span>
+                        <span class="content" id="detailChannel">${order.channel}</span>
                     </div>
-                    <div class="data-points">
-                        <div class="title"><p>Promo Code</p></div>
-                        <div class="content"><p>${order.promo_code}</p></div>
+                     <div class="detail-item">
+                        <span class="title">Promo Code</span>
+                        <span class="content" id="detailPromoCode">${order.promo_code}</span>
                     </div>
-                    <div class="data-points">
-                        <div class="title"><p>Fulfillment</p></div>
-                        <div class="content"><p>${order.fulfillment}</p></div>
+                    <div class="detail-item">
+                        <span class="title">Fulfillment</span>
+                        <span class="content" id="detailFulfillment">${order.fulfillment}</span>
                     </div>
-                    <div class="data-points">
-                        <div class="title">
-                            <p>${order.delivered_on ? 'Delivered On' : 'Estimated Delivery'}</p>
-                        </div>
-                        <div class="content">
-                            <p>${order.delivered_on || order.estimated_delivery || 'N/A'}</p>
-                        </div>
+                    <div class="detail-item">
+                        <span class="title">${order.delivered_on ? 'Delivered On' : 'Estimated Delivery'}</span>
+                        <span class="content" id="detailEstimatedDelivery">${order.delivered_on || order.estimated_delivery || 'N/A'}</span>
                     </div>
-                    <div class="data-points">
-                        <div class="title"><p>Payment Method</p></div>
-                        <div class="content"><p>${order.payment_method}</p></div>
+                    <div class="detail-item">
+                        <span class="title">Payment Method</span>
+                        <span class="content" id="detailPaymentMethod">${order.payment_method}</span>
                     </div>
-                    <div class="data-points">
-                        <div class="title"><p>Payment Status</p></div>
-                        <div class="content"><p>${order.payment_status}</p></div>
+                    <div class="detail-item">
+                        <span class="title">Payment Status</span>
+                        <span class="content" id="detailPaymentStatus">${order.payment_status}</span>
                     </div>
-                    <div class="data-points">
-                        <div class="title"><p>Payment Due</p></div>
-                        <div class="content"><p>${order.payment_due}</p></div>
+                    <div class="detail-item">
+                        <span class="title">Payment Due</span>
+                        <span class="content" id="detailPaymentDue">${order.payment_due}</span>
                     </div>
-                    </div>         
+                    <div class="detail-item">
+                        <span class="title">Tracking Number</span>
+                        <span class="content" id="detailTrackingNumber">${order.tracking_number || 'N/A'}</span>
+                    </div>
+                    <!-- Add empty divs if needed to fill grid row -->
+                    <div class="detail-item"></div>
+                    <div class="detail-item"></div>
                 </div>
-            <div class="order-actions">
-                <div class="data-points">
-                    <div class="title"><p>Tracking Number</p></div>
-                    <div class="content"><p>${order.tracking_number || 'N/A'}</p></div>
-                </div>
-                <div>
-                    <button class="view-btn">View Detail</button>
-                    <button class="download-btn">Download</button>
-                    <button class="manage-btn">Manage Financing</button>
-                </div>
+            </div>
+
+            <div class="detail-card-actions">
+                <button class="detail-action-btn view-detail-btn">
+                    <i class="fa-regular fa-eye"></i> View Detail
+                 </button>
+                <button class="detail-action-btn download-detail-btn">
+                     <i class="fa-solid fa-download"></i> Download <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <button class="detail-action-btn mark-received-btn">Mark Received</button>
             </div>
         </div>
     `;
 
-    const viewDetailButton = card.querySelector('.view-btn');
+    const viewDetailButton = card.querySelector('.view-detail-btn');
     if (viewDetailButton) {
         viewDetailButton.addEventListener('click', () => {
             const encodedOrderId = encodeURIComponent(order.order_id);
