@@ -97,7 +97,7 @@
     flex-wrap: wrap; /* Allows stacking */
 }
 
-.order-list {
+.order-list { /* The Div for the whole "table" */
     display: flex;
     flex-direction: column;
 }
@@ -236,23 +236,11 @@ button {
 }
 
 @media (max-width: 768px) {
-    /* .rows {
-        flex-direction: column;
-        padding: 0px 0px 0px 0px;
-        gap: 8px;
-    } */
-
-    .order-header {
-        flex-wrap: wrap;
-    }
-
     .order-details {
         display: flex;
         padding: 16px 0px 16px 16px;
     }
-    .order-header h2 {
-        margin: 4px 0px 0px 0px;
-    }
+    
 }
 
 @media (max-width: 542px) {

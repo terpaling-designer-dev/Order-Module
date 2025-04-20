@@ -10,7 +10,7 @@ const orders = [
         order_created: "08/10/2023",
         number_of_products: 10,
         channel: "Platform",
-        promo_code: "n/a",
+        promo_code: "N/A",
         fulfillment: "3PL (PosLaju)",
         estimated_delivery: "12/10/2023",
         payment_method: "Finance Credit: BSN",
