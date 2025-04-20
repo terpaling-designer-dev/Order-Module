@@ -240,12 +240,12 @@ button {
         width: 100%;
     }
 
-    .order-actions button {
+    .detail-card-actions button {
         width: 100%;
         margin-top: 8px;
     }
 
-    .order-actions div {
+    .detail-card-actions div {
         width: 100%;
     }
 
