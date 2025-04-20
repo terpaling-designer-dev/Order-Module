@@ -239,10 +239,10 @@ function createOrderCard(order) {
 
     <div class="detail-card-actions">
         <button class="detail-action-btn view-detail-btn">
-            <i class="fa-regular fa-eye"></i> View Detail
-            </button>
+            <i class="ph-bold ph-file-magnifying-glass"></i> View Detail
+        </button>
         <button class="detail-action-btn download-detail-btn">
-                <i class="fa-solid fa-download"></i> Download <i class="fa-solid fa-chevron-down"></i>
+                <i class="ph-bold ph-cloud-arrow-down"></i> Download <i class="ph-bold ph-caret-down"></i>
         </button>
         <button class="detail-action-btn mark-received-btn">Mark Received</button>
     </div>

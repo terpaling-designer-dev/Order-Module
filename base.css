@@ -196,20 +196,22 @@ h2 { /* Keep existing h2 reset */
 }
 
 .detail-action-btn {
-    padding: 9px 18px;
+    padding-left: 14px;
+    padding-right: 16px;
     border-radius: 6px;
+    height: 40px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    border: 1px solid; /* Base border */
+    border: 1px solid;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .detail-action-btn i {
-    font-size: 1em; /* Match text size or adjust */
+    font-size: 1.4em; /* Match text size or adjust */
 }
 
 .view-detail-btn, .download-detail-btn {
@@ -221,8 +223,8 @@ h2 { /* Keep existing h2 reset */
     background-color: #f8f5ff; /* Very light purple */
 }
 
-.download-detail-btn .fa-chevron-down {
-    font-size: 0.8em; /* Smaller arrow */
+.download-detail-btn .ph-caret-down {
+    font-size: 1.2em; /* Smaller arrow */
     margin-left: 4px;
 }
 
