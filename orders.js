@@ -83,7 +83,7 @@ const orders = [
         number_of_products: 3,
         channel: "Manual",
         promo_code: "None Applied",
-        fulfillment: "Internal Delivery",
+        fulfillment: "Seller's Fleet",
         estimated_delivery: "18/10/2023",
         payment_method: "Bank Transfer",
         payment_status: "Payment Due",
