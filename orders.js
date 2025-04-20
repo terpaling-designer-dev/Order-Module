@@ -170,82 +170,80 @@ const orders = [
 
 function createOrderCard(order) {
     const card = document.createElement('div');
-    card.className = `order-card ${order.status.toLowerCase().replace(/\s+/g, '-')}`; // Use status for potential styling, replace spaces
+    card.className = `detail-card ${order.status.toLowerCase().replace(/\s+/g, '-')}`; // Use status for potential styling, replace spaces
 
     // Calculate number of products from array if available
     const numProductsDisplay = order.products ? order.products.length : (order.number_of_products || 'N/A');
 
-    card.innerHTML = `
-        <div class="detail-card">
-            <div class="detail-card-header">
-                <div class="detail-card-header-left">
-                    <h2 id="detailSupplier">${order.supplier}</h2>
-                    <span class="detail-order-id" id="detailOrderId">${order.order_id}</span>
-                    <span class="detail-status ${order.status.toLowerCase().replace(/\s+/g, '-')}" id="detailStatus">${order.status}</span>
-                </div>
-                <div class="detail-card-header-right">
-                    <span class="detail-amount" id="detailAmount">${order.amount}</span>
-                </div>
-            </div>
-
-            <div class="detail-card-body">
-                <div class="detail-grid">
-                     <div class="detail-item">
-                        <span class="title">Order Created</span>
-                        <span class="content" id="detailOrderCreated">${order.order_created}</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="title">Number of Products</span>
-                        <span class="content" id="detailNumProducts">${numProductsDisplay}</span>
-                    </div>
-                     <div class="detail-item">
-                        <span class="title">Channel</span>
-                        <span class="content" id="detailChannel">${order.channel}</span>
-                    </div>
-                     <div class="detail-item">
-                        <span class="title">Promo Code</span>
-                        <span class="content" id="detailPromoCode">${order.promo_code}</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="title">Fulfillment</span>
-                        <span class="content" id="detailFulfillment">${order.fulfillment}</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="title">${order.delivered_on ? 'Delivered On' : 'Estimated Delivery'}</span>
-                        <span class="content" id="detailEstimatedDelivery">${order.delivered_on || order.estimated_delivery || 'N/A'}</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="title">Payment Method</span>
-                        <span class="content" id="detailPaymentMethod">${order.payment_method}</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="title">Payment Status</span>
-                        <span class="content" id="detailPaymentStatus">${order.payment_status}</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="title">Payment Due</span>
-                        <span class="content" id="detailPaymentDue">${order.payment_due}</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="title">Tracking Number</span>
-                        <span class="content" id="detailTrackingNumber">${order.tracking_number || 'N/A'}</span>
-                    </div>
-                    <!-- Add empty divs if needed to fill grid row -->
-                    <div class="detail-item"></div>
-                    <div class="detail-item"></div>
-                </div>
-            </div>
-
-            <div class="detail-card-actions">
-                <button class="detail-action-btn view-detail-btn">
-                    <i class="fa-regular fa-eye"></i> View Detail
-                 </button>
-                <button class="detail-action-btn download-detail-btn">
-                     <i class="fa-solid fa-download"></i> Download <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <button class="detail-action-btn mark-received-btn">Mark Received</button>
-            </div>
+    card.innerHTML = `    
+    <div class="detail-card-header">
+        <div class="detail-card-header-left">
+            <h2 id="detailSupplier">${order.supplier}</h2>
+            <span class="detail-order-id" id="detailOrderId">${order.order_id}</span>
+            <span class="detail-status ${order.status.toLowerCase().replace(/\s+/g, '-')}" id="detailStatus">${order.status}</span>
         </div>
+        <div class="detail-card-header-right">
+            <span class="detail-amount" id="detailAmount">${order.amount}</span>
+        </div>
+    </div>
+
+    <div class="detail-card-body">
+        <div class="detail-grid">
+                <div class="detail-item">
+                <span class="title">Order Created</span>
+                <span class="content" id="detailOrderCreated">${order.order_created}</span>
+            </div>
+            <div class="detail-item">
+                <span class="title">Number of Products</span>
+                <span class="content" id="detailNumProducts">${numProductsDisplay}</span>
+            </div>
+                <div class="detail-item">
+                <span class="title">Channel</span>
+                <span class="content" id="detailChannel">${order.channel}</span>
+            </div>
+                <div class="detail-item">
+                <span class="title">Promo Code</span>
+                <span class="content" id="detailPromoCode">${order.promo_code}</span>
+            </div>
+            <div class="detail-item">
+                <span class="title">Fulfillment</span>
+                <span class="content" id="detailFulfillment">${order.fulfillment}</span>
+            </div>
+            <div class="detail-item">
+                <span class="title">${order.delivered_on ? 'Delivered On' : 'Estimated Delivery'}</span>
+                <span class="content" id="detailEstimatedDelivery">${order.delivered_on || order.estimated_delivery || 'N/A'}</span>
+            </div>
+            <div class="detail-item">
+                <span class="title">Payment Method</span>
+                <span class="content" id="detailPaymentMethod">${order.payment_method}</span>
+            </div>
+            <div class="detail-item">
+                <span class="title">Payment Status</span>
+                <span class="content" id="detailPaymentStatus">${order.payment_status}</span>
+            </div>
+            <div class="detail-item">
+                <span class="title">Payment Due</span>
+                <span class="content" id="detailPaymentDue">${order.payment_due}</span>
+            </div>
+            <div class="detail-item">
+                <span class="title">Tracking Number</span>
+                <span class="content" id="detailTrackingNumber">${order.tracking_number || 'N/A'}</span>
+            </div>
+            <!-- Add empty divs if needed to fill grid row -->
+            <div class="detail-item"></div>
+            <div class="detail-item"></div>
+        </div>
+    </div>
+
+    <div class="detail-card-actions">
+        <button class="detail-action-btn view-detail-btn">
+            <i class="fa-regular fa-eye"></i> View Detail
+            </button>
+        <button class="detail-action-btn download-detail-btn">
+                <i class="fa-solid fa-download"></i> Download <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <button class="detail-action-btn mark-received-btn">Mark Received</button>
+    </div>
     `;
 
     const viewDetailButton = card.querySelector('.view-detail-btn');

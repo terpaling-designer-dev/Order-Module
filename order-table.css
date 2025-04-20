@@ -112,12 +112,6 @@
     flex-direction: column;
 }
 
-.order-card {
-    background: white;
-    border: 1px solid #ccc; /* Outline color */
-    border-radius: 8px; /* Optional: rounded corners */
-}
-
 .order-header {
     display: flex;
     justify-content: space-between;
