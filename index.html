@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order List</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="order-table.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Orders</h1>
+    <header class="page-header">
+        <h1>Order List</h1>
     </header>
-    <div class="container">
+    <div class="order-tabs-container">
         <nav class="order-tabs">
             <button class="active">All Orders</button>
             <button>Unpaid</button>
@@ -24,7 +26,7 @@
             <button>Dispute</button>
         </nav>
     </div>
-    <div class="container">
+    <div class="detail-content-area">
         <div class="order-list">
             <div class="top-section">
                 <div class="search-filters">
@@ -37,7 +39,7 @@
                     </select>
                     <input type="text" placeholder="Search Orders">
                     <button>
-                      <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="ph-bold ph-magnifying-glass"></i>
                     </button>
                  </div>
                 <div class="right-section">

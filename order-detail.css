@@ -1,0 +1,156 @@
+/* --- only for components or elements specific to order detail page --- */
+/* Order Card css is in base.css file */
+
+/* Product List Styles */
+.product-list-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.product-list-card h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #212529;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.product-list-header, .product-line {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    font-size: 13px;
+    color: #6c757d; /* Grey for header */
+    border-bottom: 1px solid #e9ecef;
+}
+.product-line {
+     color: #212529; /* Darker for product lines */
+     font-size: 14px;
+}
+.product-list-body .product-line:last-child {
+    border-bottom: none;
+}
+
+
+.col-index { flex: 0 0 5%; text-align: center; }
+.col-product { flex: 1 1 40%; display: flex; align-items: center; gap: 15px; }
+.col-price { flex: 0 0 15%; text-align: right; }
+.col-quantity { flex: 0 0 15%; text-align: right; }
+.col-total { flex: 0 0 20%; text-align: right; font-weight: 500; }
+
+.product-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain; /* Or cover */
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.product-name {
+    font-weight: 500;
+}
+
+/* Product Summary Styles */
+.product-list-summary {
+    padding: 20px 24px;
+    border-top: 1px solid #dee2e6; /* Slightly darker top border */
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.summary-line:last-child {
+    margin-bottom: 0;
+}
+
+.summary-line span:first-child { /* Label */
+    color: #6c757d;
+}
+.summary-line span:last-child { /* Value */
+    color: #212529;
+    font-weight: 500;
+}
+
+.summary-divider {
+    border: none;
+    border-top: 1px dashed #adb5bd; /* Dashed line */
+    margin: 15px 0;
+}
+
+.summary-line.total span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #212529;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .detail-grid {
+        grid-template-columns: repeat(auto-fit, minmax(142px, 1fr)); /* Adjust for smaller screens */
+    }
+     .product-list-header {
+         display: none; /* Hide header on small screens, rely on labels */
+     }
+    .product-line {
+        flex-wrap: wrap; /* Stack columns */
+        padding: 15px;
+        gap: 10px;
+        border-bottom: 1px solid #e9ecef;
+        position: relative; /* For pseudo-elements */
+    }
+     .col-index { display: none; } /* Hide index */
+
+     .col-product { flex-basis: 100%; order: 1; } /* Full width, first */
+     .col-price, .col-quantity, .col-total {
+         flex-basis: calc(50% - 10px); /* Two columns below product */
+         text-align: left;
+         padding-left: 10px; /* Indent */
+         position: relative;
+     }
+     .col-price { order: 2; }
+     .col-quantity { order: 3; text-align: right; padding-left: 0; padding-right: 10px;}
+     .col-total { order: 4; flex-basis: 100%; text-align: right; margin-top: 10px; font-weight: 600; }
+
+     /* Add labels using pseudo-elements */
+     .col-price::before { content: "Unit Price: "; font-weight: normal; color: #6c757d; }
+     .col-quantity::before { content: "Qty: "; font-weight: normal; color: #6c757d;}
+     .col-total::before { content: "Total: "; font-weight: normal; color: #6c757d; }
+
+     .product-list-summary { padding: 15px; }
+}
+
+@media (max-width: 576px) {
+     .detail-card-header, .detail-card-body, .detail-card-actions, .product-list-card h2 {
+         padding: 15px; /* Reduce padding on small screens */
+     }
+     .detail-grid {
+        grid-template-columns: 1fr; /* Single column grid */
+        gap: 15px;
+    }
+    .detail-card-actions {
+        justify-content: center; /* Center buttons */
+    }
+    .detail-action-btn {
+        width: 100%; /* Make buttons full width */
+        justify-content: center;
+    }
+    .col-price, .col-quantity {
+        flex-basis: 100%; /* Stack price/qty fully */
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 0;
+    }
+     .col-quantity { text-align: left;} /* Override right align */
+
+
+}
+
+/* --- END OF FILE styles.css --- */

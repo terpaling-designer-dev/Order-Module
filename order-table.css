@@ -1,76 +1,29 @@
-* {
-    box-sizing: border-box;
-}
-
-p {
-  margin: 0px;
-}
-
-h2 {
-  margin: 0px;
-  font-size: 20px;
-}
-
-body {
-    font-family: noto-sans, sans-serif;
-    font-size:14px;
-    background-color: #f5f5f5;
-    width: 90%;
-    margin: 0 auto; /* Centers the container */
-    padding-bottom: 32px;
-
-}
-
-.container {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-width: 1440px;
-    margin: 0 auto;  /* This centers the container */
-}
+/* Order Table Styles */
 
 
-.data-points {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 2px;
-    flex: 1;
-}
-
-.title p{
-    color: #666; /* Adjust color as needed */
-    flex: 1;
-}
-
-.content p{
-    font-weight: 600;
-    color: #333; /* Adjust color as needed */
-    flex: 1;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1440px;
-    margin: 0 auto;  /* This centers the container */
+/* Component: Order Tabs */
+.order-tabs-container {
+    max-width: 1296px;
+    margin: 20px auto 10px auto;
 }
 
 .order-tabs {
     display: flex;
-    /* no gap or small gap to keep the buttons flush */
-    gap: 0;
-    background: #fff;
-    /* Rounded corners on the container */
-    border-radius: 8px;
-    padding: 8px;
+    gap: 0; /* no gap or small gap to keep the buttons flush */
+    border-radius: 8px; /* Rounded corners on the container */
     margin-bottom: 12px;
+    
     overflow-x: auto; /* Allows horizontal scrolling if content overflows */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
 }
 
 .order-tabs button {
-    background: #fff;
-    padding: 10px 15px;
+    background: transparent;
+    padding: 12px 0px 12px 0px;
     border-radius: 6px;
+    font-weight: 600;
+    color: #6c757d;
     cursor: pointer;
     flex: 1; /* Ensures buttons take equal space */
     min-width: 100px; /* Prevents buttons from becoming too small */
@@ -81,13 +34,15 @@ header {
     color: white;
 }
 
+
 .top-section {
     border-bottom: 1px solid #E5E5E5;
     display: flex;
     justify-content: space-between; /* Align items in a row */
     align-items: center; /* Vertically center elements */
     flex-wrap: wrap;
-    padding: 12px 12px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .search-filters {
@@ -142,23 +97,9 @@ header {
     flex-wrap: wrap; /* Allows stacking */
 }
 
-.order-table {
-    display: flex;
-    padding: 16px;
-    gap: 16px;
-    flex-direction: column;
-  
-}
-
-.order-list {
+.order-list { /* The Div for the whole "table" */
     display: flex;
     flex-direction: column;
-}
-
-.order-card {
-    background: white;
-    border: 1px solid #ccc; /* Outline color */
-    border-radius: 8px; /* Optional: rounded corners */
 }
 
 .order-header {
@@ -197,15 +138,16 @@ header {
     font-weight: 500;
 }
 
-.order-details {
-  padding: 0px 16px 0px 16px;
+.detail-card-body {
+    padding: 20px 0px 20px 24px;
+    border-bottom: 1px solid #e9ecef; /* Separator line */
 }
 
-.rows {
-  width: 100%;
-  display: inline-flex;
-  padding: 16px 0px 16px 0px;
-  flex-wrap: wrap;
+
+.detail-grid {
+    display: grid; /* Adjust columns for responsiveness */
+   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* More flexible */
+   gap: 20px 16px; /* Row and column gap */
 }
 
 .order-actions {
@@ -275,30 +217,22 @@ button {
         width: 100%;
         padding-top: 10px; /* Add spacing when stacked */
     }
+
+    .detail-grid {
+        display: grid;
+        /* Adjust columns for responsiveness */
+       grid-template-columns: repeat(auto-fit, minmax(142px, 1fr)); /* More flexible */
+       gap: 20px 16px; /* Row and column gap */
+    }
+    
 }
 
 @media (max-width: 768px) {
-    .rows {
-        flex-direction: column;
-        padding: 0px 0px 0px 0px;
-        gap: 8px;
-    }
-
-    .order-header {
-        flex-wrap: wrap;
-    }
-
     .order-details {
         display: flex;
         padding: 16px 0px 16px 16px;
     }
-    .order-header h2 {
-        margin: 4px 0px 0px 0px;
-    }
-
-    .order-actions .data-points {
-        min-width: max-content;
-    }
+    
 }
 
 @media (max-width: 542px) {
@@ -306,12 +240,12 @@ button {
         width: 100%;
     }
 
-    .order-actions button {
+    .detail-card-actions button {
         width: 100%;
         margin-top: 8px;
     }
 
-    .order-actions div {
+    .detail-card-actions div {
         width: 100%;
     }
 
